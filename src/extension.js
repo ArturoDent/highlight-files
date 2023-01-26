@@ -7,7 +7,7 @@ const vscode = require('vscode');
 async function activate(context) {
   
   const workspaceFiles = await vscode.workspace.findFiles('**');
-  const fileDecorationProvider = await createDecoratorClass(workspaceFiles);  // runs on start-up
+  await createDecoratorClass(workspaceFiles);  // runs on start-up
 }
 
 /**
@@ -48,7 +48,7 @@ async function createDecoratorClass(workspaceFiles) {
 // exports.activate = activate;
 
 function deactivate() {
-  this.fileDecorationProvider.dispose();
+
 }
 
 module.exports = {
