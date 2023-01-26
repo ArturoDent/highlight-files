@@ -2,7 +2,7 @@
 
 This vscode extension will highlight the editor tab of any file opened that is not part of the workspace.  The tab will be have a unique color which can configure.  Both the editor tab label and the filename in the Explorer will get this color.  
 
-## Features
+![demo](images/decorateNonWorkspaceFiles.gif)
 
 The color used is a `ThemeColor` called `highlightFiles.nonWorkspaceFiles` and defaults to red or `#f00`.  That may not work in the theme you use for your editor so it is configurable.  In your `settings.json` add this `colorCustomiztion`:  
 
