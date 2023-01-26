@@ -17,10 +17,36 @@ Any hex color can be used including those with opacity like `#91ff0060`: the las
 
 ## Known Issues
 
+To enable the editor color and badges these settings must be enabled:  
+
+```jsonc
+  Workbench > Editor > Decorations: Badges  
+  // Controls whether editor file decorations should use badges.  
+  "workbench.editor.decorations.badges": true,
+
+  Workbench > Editor > Decorations: Colors  
+  // Controls whether editor file decorations should use colors.  
+  "workbench.editor.decorations.colors": true,
+```
+
+To enable the file explorer color and badges these settings must be enabled:  
+  
+```jsonc
+  Explorer > Decorations: Badges  
+  // Controls whether file decorations should use badges.  
+  "explorer.decorations.badges": true,
+
+  Explorer > Decorations: Badges  
+  // Controls whether file decorations should use colors.  
+  "explorer.decorations.colors": true,
+```
+  
+  ----------
+
 After installing the extension, you may have to reload vscode to activate this extension.  
 
 ## Release Notes
 
-### 0.0.1
+### 0.0.3
 
-Initial release.
+Ignore uri.scheme === 'vscode-userdata' so `settings.json` and `keybindings.json` are not decorated.  
