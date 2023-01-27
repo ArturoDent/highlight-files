@@ -2,7 +2,7 @@
 	"name": "highlight-files",
 	"displayName": "Highlight Files",
 	"description": "",
-	"version": "0.0.3",
+	"version": "0.0.4",
 	"engines": {
 		"vscode": "^1.46.0"
 	},
@@ -21,22 +21,29 @@
     "onStartupFinished"
 	],
 	"contributes": {
-		"commands": [
+    "configuration": [
       {
-            "command": "highlight-files.helloWorld",
-            "title": "Hello World"
-
-		  }
+        "title": "Highlight Files",
+        "properties": {
+          "highlight-files.enable": {
+            "type": "boolean",
+            "scope": "machine",
+            "default": false,
+            "markdownDescription": "Enable colored tabs for non-workspace files."
+          }
+        }
+      }
     ],
+
     "colors": [
       {
         "id": "highlightFiles.nonWorkspaceFiles",
         "description": "Color for a non-workspace editor label",
         "defaults": {
-          "dark": "#f00",
-          "light": "#f00",
-          "highContrast": "errorForeground",
-          "highContrastLight": "errorForeground"
+          "dark": "#91ff00",
+          "light": "#91ff00",
+          "highContrast": "#91ff00",
+          "highContrastLight": "#91ff00"
         }
       }
     ]
