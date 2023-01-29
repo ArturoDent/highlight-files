@@ -25,11 +25,28 @@
       {
         "title": "Highlight Files",
         "properties": {
-          "highlight-files.enable": {
+          "highlightFiles.decorations.enable.color": {
             "type": "boolean",
-            "scope": "machine",
+            "scope": "resource",
+            "order": 0,
             "default": false,
-            "markdownDescription": "Enable colored tabs for non-workspace files."
+            "markdownDescription": "Enable colored labels on the tabs of non-workspace files."
+          },
+          "highlightFiles.decorations.enable.badges": {
+            "type": "boolean",
+            "scope": "resource",
+            "order": 1,
+            "default": false,
+            "markdownDescription": "Enable colored badges on the tabs of non-workspace files."
+          },
+          "highlightFiles.decorations.badge": {
+            "type": "string",
+            "maxLength": 2,
+            "minLength": 1,
+            "scope": "resource",
+            "order": 2,
+            "default": "!",
+            "markdownDescription": "Badge to use on the tabs of non-workspace files. Can be 1-2 characters, including unicode characters. If blank, the default '!' will be used."
           }
         }
       }
